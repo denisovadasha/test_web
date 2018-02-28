@@ -1,0 +1,13 @@
+default:
+     extensions:
+        Behat\MinkExtension:
+          base_url: http://localhost.com/myItems
+          browser_name: firefox
+          default_session: selenium2
+          selenium2:
+            wd_host: http://hub.selenium.intern.com:4444/wd/hub
+            capabilities: {'platform':'WINDOWS', 'browser':'firefox', 'version':'58'}
+     suites:
+       mink_session:
+         contexts:
+           - FeatureContext
